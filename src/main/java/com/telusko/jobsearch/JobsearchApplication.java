@@ -16,7 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class JobSearchApplication {
 
-	@Bean
+	@Bean //it helps the swagger to be loaded. Its managed by spring IOC container
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
 				.apis(RequestHandlerSelectors.withClassAnnotation(RestController.class)).paths(PathSelectors.any())
@@ -30,7 +30,7 @@ public class JobSearchApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(JoblistingApplication.class, args);
+		SpringApplication.run(JobSearchApplication.class, args);
 	}
 
 }

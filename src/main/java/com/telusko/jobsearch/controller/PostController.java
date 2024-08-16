@@ -26,7 +26,7 @@ public class PostController
     @Autowired
     SearchRepository srepo;
 
-    @ApiIgnore
+//    @ApiIgnore
     @RequestMapping(value="/")
     public void redirect(HttpServletResponse response) throws IOException {
         response.sendRedirect("/swagger-ui.html");
