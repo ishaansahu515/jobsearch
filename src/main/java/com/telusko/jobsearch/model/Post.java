@@ -1,12 +1,17 @@
 package com.telusko.jobsearch.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Arrays;
 
 @Document(collection = "JobPost")
+@Entity
 public class Post {
+
+    @Id
     private String profile;
     private String desc;
     private int exp;
