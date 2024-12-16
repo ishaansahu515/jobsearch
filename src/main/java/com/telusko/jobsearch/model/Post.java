@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Arrays;
 
-@Document(collection = "JobPost")
+@Document(collection = "jobsearch")
 @Entity
 public class Post {
 
