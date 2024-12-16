@@ -31,8 +31,8 @@ public class SearchRepositoryImpl implements SearchRepository{
 
         final List<Post> posts = new ArrayList<>();
 
-        MongoDatabase database = client.getDatabase("telusko");
-        MongoCollection<Document> collection = database.getCollection("JobPost");
+        MongoDatabase database = client.getDatabase("ishaan");
+        MongoCollection<Document> collection = database.getCollection("jobsearch");
 
         AggregateIterable<Document> result = collection.aggregate(Arrays.asList(new Document("$search",
                         new Document("text",
