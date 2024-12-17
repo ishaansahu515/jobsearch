@@ -53,5 +53,10 @@ public class PostController
         return repo.save(post);
     }
 
-
+    @DeleteMapping("/post/{id}")
+    @CrossOrigin
+    public String deletePost(@PathVariable String id) {
+        repo.deleteById(id);
+        return "Post with ID: " + id + " has been deleted successfully!";
+    }
 }
